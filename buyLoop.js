@@ -21,23 +21,27 @@ var itemsToBuy = [new item("Sword", 200), new item("Shield", 50),
 
 function viewStore()
 {
-    console.log("The STORE");
+    console.log("----The STORE----");
+    console.log();
     console.log("{");
     for(i = 0; i < itemsToBuy.length; i++){
         console.log("***NAME OF ITEM: " + itemsToBuy[i].name + 
-                    " COST OF ITEM: " + itemsToBuy[i].cost + " ***");
+                    " | COST OF ITEM: " + itemsToBuy[i].cost + " ***");
     }
     console.log(" }");
 }
 
 function viewInventory(){
     console.log("You have these items in your INVENTORY");
+    console.log();
     console.log("{ ***");
     for(i = 0; i < inventory.length; i++)
     {
         console.log(inventory[i].name + " *** ");
+        console.log();
     }
     console.log(" }");
+    console.log();
 }
 
 function buy()
@@ -50,14 +54,22 @@ function buy()
 
         while(found == false)
         {
-            found = ask == itemsToBuy[idx].name.toLowerCase() && amtToSpend >= itemsToBuy[idx].cost;
+            found = ask == itemsToBuy[idx].name.trim().toLowerCase() && amtToSpend >= itemsToBuy[idx].cost;
             if(found == true)
             {
                 confirmBuy == true;
                 itemIndex = idx;
                 break;
             }
-            idx++;
+            else if( ask == itemsToBuy[idx].name.trim().toLowerCase() && amtToSpend < itemsToBuy[idx].cost){
+                console.log("You have an insufficient balance: " + amtToSpend+  ", for this item. Purchase something cheaper");
+                console.log();
+                console.log("Remeber, the more you buy, the greater your quest! Buy up!");
+                break;
+            }
+            else{
+                 idx++;
+            }
         }
     if(found == true)
     {
@@ -117,6 +129,7 @@ if(startGame.toLowerCase() == "yes")
 }
 
 else{
+    console.log();
     console.log("Until next time! "  + playerInfo[0]);
 }
 
