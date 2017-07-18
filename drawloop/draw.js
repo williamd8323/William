@@ -1,10 +1,9 @@
-var scale = Math.random()*55;
-
 function setup(){
-	createCanvas(1000,1000);
-    background(Math.random()*225, Math.random()*225, Math.random()*225);
+    createCanvas(windowWidth/1.75, windowHeight);
+    background(Math.random()*255, Math.random()*255, Math.random()*255);
 }
 
+var scale = Math.random()*55;
 function drawRect(){
     scale = Math.random()*55;
     fill(Math.random()*225, Math.random()*225, Math.random()*225);
