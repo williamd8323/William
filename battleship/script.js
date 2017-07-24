@@ -90,8 +90,9 @@ function setup(){
     createGrid();
 }
 
-//function draw(){
-    //cpuMove();
-    //humanMove();
-//}
+function play(){
+    cpuMove();
+    humanMove();
+    checkState();
+}
 
