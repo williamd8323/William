@@ -1,0 +1,2256 @@
+  
+/* TABLE OF CONTENTS
+
+	1. Import section
+	2. Basic styles
+	3. Typography
+	4. Header
+  5. Product showcase
+  6. Icon and features
+  7. Product showcase center
+  8. Pricing table
+  9. Parallax with texts
+  10. Customer satisfaction
+  11. Clients
+  12. News
+  13. Video
+  14. App stores
+  15. FAQ
+  16. Team
+  17. Testimonials
+  18. Twitter
+  19. Contact
+  20. Footer
+  21. Sidebar menu
+  22. Breakpoints for other resolutions
+
+*/
+
+
+
+/* 1. IMPORT SECTION */
+
+	@import url("bootstrap.css");
+	@import url("https://fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,latin-ext");
+	@import url("https://fonts.googleapis.com/css?family=Montserrat:400&subset=latin,latin-ext");
+	@import url("ionicons.min.css");
+
+/*  video*/
+  .lj-texts h2 {
+    margin-top: 40px !important;
+    margin-bottom: -60px !important;
+  }
+  .lj-texts h2 a{
+    color: white;
+    padding-top: 30px;
+  }
+  .lj-texts h2 a:after {
+    content: '';
+    background-image: url('https://www.showwwcase.nl/img/bg.jpg');
+    width: 36px;
+    height: 36px;
+    background-size: 36px;
+    background-position: center;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+    margin-top: -5px;
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    animation-delay: 3s;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  html.fancybox-lock .panel {
+    background: url(../fancybox/fancybox_overlay.png);
+  }
+
+    @keyframes shake {
+      10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+      
+      20%, 80% {
+        transform: translate3d(2px, 0, 0);
+      }
+
+      30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+
+      40%, 60% {
+        transform: translate3d(4px, 0, 0);
+      }
+    }
+ 
+/* 2. BASIC STYLES */
+
+	body {
+		font: 16px/1.5 Roboto, "Century Gothic", "Trebuchet MS", Helvetica, sans-serif;
+		background-color: #fff;
+		color: #222222;
+		font-weight: 300;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	body.beginnen {
+		background: #111;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	::-moz-selection {
+		background: #1dd5d1;
+		color: #fff;
+	}
+	::selection {
+		background: #1dd5d1;
+		color: #fff;
+	}
+
+	a {
+		color: #1dd5d1;
+		transition: all 0.125s ease-in-out 0s;
+		-moz-transition: all 0.125s ease-in-out 0s;
+		-webkit-transition: all 0.125s ease-in-out 0s;
+		-o-transition: all 0.125s ease-in-out 0s;
+		-ms-transition: all 0.125s ease-in-out 0s;
+	}
+
+	a:hover {
+		color: #1dd5d1;
+	}
+
+	a, a:hover, a:active, a:focus {
+		outline: 0;
+		border: 0;
+		text-decoration: none;
+	}
+
+	input[type=text],
+	input[type=submit],
+	textarea {
+		-webkit-appearance: none;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+	}
+
+	.lj-float-left {
+		float: left;
+	}
+
+	.lj-float-right {
+		float: right;
+	}
+
+	.lj-block-center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.lj-show {
+		display: block !important;
+	}
+
+	.lj-hide {
+		display: none !important;
+		visibility: hidden !important;
+	}
+
+	.lj-preloader {
+		background: #fff url('../img/preloader.svg') no-repeat center center;
+		bottom: 0;
+		height: 100%;
+		left: 0;
+		overflow: hidden;
+		position: fixed;
+		right: 0;
+		top: 0;
+		width: 100%;
+		z-index: 99999;
+	}
+
+
+
+/* 3. TYPOGRAPHY */
+
+	p {
+		line-height: 2;
+	}
+
+	.lj-text-uppercase {
+		text-transform: uppercase;
+	}
+
+	.lj-text-center {
+		text-align: center;
+	}
+
+	.lj-text-left {
+		text-align: left;
+	}
+
+	.lj-text-right {
+		text-align: right;
+	}
+
+	.lj-text-justify {
+		text-align: justify;
+	}
+
+	.lj-text-underline {
+		text-decoration: underline;
+	}
+
+
+
+/* 4. HEADER */
+
+	header {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	header > .container {
+		height: 100%;
+		padding: 50px 20px 300px;
+		position: relative;
+		z-index: 1;
+	}
+
+	header > canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.lj-overlay {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.lj-background-repeat {
+	    background-repeat: repeat;
+	}
+
+	.lj-background-no-repeat {
+		background-repeat: no-repeat;
+	}
+
+	.lj-overlay-none {
+		display: none;
+		visibility: hidden;
+	}
+
+	.lj-overlay-color {
+	}
+
+  .lj-overlay-image {
+      background-image: url('../img/dots.png');
+      background-repeat: repeat;
+  }
+
+	.lj-overlay-gradient {
+		background: -moz-linear-gradient(215deg,  rgba(0,204,255,0.8) 0%, rgba(196,255,0,0.8) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,204,255,0.8)), color-stop(100%,rgba(196,255,0,0.8))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(215deg,  rgba(0,204,255,0.8) 0%,rgba(196,255,0,0.8) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(215deg,  rgba(0,204,255,0.8) 0%,rgba(196,255,0,0.8) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(215deg,  rgba(0,204,255,0.8) 0%,rgba(196,255,0,0.8) 100%); /* IE10+ */
+		background: linear-gradient(215deg,  rgba(0,204,255,0.8) 0%,rgba(196,255,0,0.8) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ccff', endColorstr='#c4ff00',GradientType=1 ) progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/1x1.png'); /* IE6-9 fallback on horizontal gradient */
+		pointer-events:none;
+	}
+
+	.mobile .mbYTP_wrapper,
+	.tablet .mbYTP_wrapper {
+		z-index: -1 !important;
+	}
+
+	.lj-menu-name h3 {
+  	font-family: 'Slabo 13px';
+		color: #fff;
+		line-height: 50px;
+		font-size: 1.5em;
+		margin: 0;
+	}
+
+	.lj-menu {
+		text-align: right;
+	}
+
+	.lj-menu ul {
+		margin-top: 5px;
+		margin-bottom: 0;
+		padding-left: 0;
+		list-style-type: none;
+	}
+
+	.lj-menu li {
+		display: inline-block;
+		margin-right: 0;
+		font-size: 18px;
+	}
+
+	.lj-menu li:last-child {
+		margin-right: 0;
+	}
+
+	.lj-menu li a {
+		display: inline-block;
+		color: #fff;
+		padding: 10px 14px;
+	}
+
+	.lj-menu li a:hover {
+		color: #1dd5d1;
+	}
+
+  .lj-menu span {
+    font-size: 2em;
+    color: #fff;
+    display: none;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+  }
+
+  .lj-menu span:hover {
+    color: #1dd5d1;
+  }
+
+  a#logo-begin {
+	position: absolute;
+	left: calc(50% - 175px);
+	top: -150px;
+	width: 350px;
+  }
+
+  a#logo-begin img {
+	width: 100%;
+  }
+
+	.lj-logo a,
+	.lj-logo img {
+		width: 325px;
+		height: auto;
+	}
+
+	.lj-logo a {
+		display: inline-block;
+	}
+
+	.lj-logo img {
+		vertical-align: bottom;
+	}
+
+	.lj-texts {
+		text-align: center;
+		margin-top: 200px;
+  }
+
+  .lj-texts h2 {
+  	font-size: 1.5em;
+    color: #fff;
+    margin: 0;
+    word-wrap: break-word;
+    font-weight: 300;
+	 line-height: 50px;
+
+  }
+
+  .lj-texts h2 span {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .lj-texts h1 {
+	max-width: 750px;
+	display: inline-block;
+	font-family: Roboto, "Century Gothic", "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 55px;
+	font-weight: 300;
+    color: #fff;
+    margin: 25px 0 0;
+	position: relative;
+	letter-spacing: 0px;
+	line-height: 1.2em;
+  }
+
+  .lj-texts h1 span {
+	position: absolute;
+	right: 50px;
+	top: -100px;
+	display: block;
+	background: #1dd5d1;
+	font-size: 18px;
+	color: #fff;
+	width: 96px;
+	height: 96px;
+	line-height: 96px;
+	font-weight: 400;
+	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+  }
+
+  .lj-buttons {
+    margin-top: 25px;
+  }
+
+  .lj-buttons a {
+    height: 50px;
+    line-height: 48px;
+    padding: 0 25px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .lj-buttons a:first-child {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border: 1px solid rgba(29,230,209,0.6);
+    color: #fff;
+    background-color: transparent;
+  }
+
+  .lj-buttons a:last-child {
+    border: 0;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .lj-buttons a:first-child:hover {
+    border: 1px solid #1dd5d1;
+    color: #fff;
+    background-color: #1dd5d1;
+  }
+
+  .lj-buttons a:last-child:hover {
+    color: #fff;
+  }
+
+  .lj-trialform {
+    width: 650px;
+    height: 235px;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #f6f8fa;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    padding: 25px;
+    box-shadow: 0 15px 12px 0 rgba(161,170,180,.05),0 19px 38px 0 rgba(161,170,180,.35);
+    text-align: center;
+  }
+
+  body.beginnen .lj-trialform {
+	bottom: auto;
+	top: 45%;
+	box-shadow: none;
+  }
+
+  .lj-trialform h3 {
+    font-weight: 300;
+    margin: 0 0 20px;
+    font-size: 1.6em;
+  }
+
+  .lj-trialform input[type=text] {
+    width: 200px;
+    background-color: #fff;
+    color: #1B2432;
+    padding: 0 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 0;
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .lj-trialform input[type=text].lj-trial-text-two {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+
+  .lj-trialform input:focus {
+    outline: 0;
+  }
+
+  .lj-trialform input[type=submit] {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    background-color: #1dd5d1;
+    color: #fff;
+    padding: 0 25px;
+    border: 0;
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-bottomright: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    vertical-align: top;
+  }
+
+  .lj-trialform input[type=text],
+  .lj-trialform input[type=submit] {
+    height: 50px;
+    line-height: 46px;
+    display: inline-block;
+    font-size: 0.9em;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+  }
+
+  .lj-trialform input[type=submit]:hover {
+    color: #fff;
+    background-color: #1ec3bf;
+  }
+
+  .lj-trial-message {
+    padding: 0;
+    color: #222;
+    font-size: 1.1em;
+    display: block;
+    margin: 10px 0 0;
+  }
+
+  .lj-trial-message i {
+    margin-right: 5px;
+  }
+
+  .lj-trial-message .ion-alert-circled {
+    color: #ff5c5c;
+  }
+
+  .lj-trial-message .ion-checkmark {
+    color: #2ecc71;
+  }
+
+  .lj-trialform p {
+    color: #888;
+    font-size: 1.07em;
+    margin: 0;
+  }
+
+
+
+/* 5. PRODUCT SHOWCASE */
+
+  .tour {
+    padding: 150px 0 0px;
+  }
+
+  .tour .row {
+    padding-bottom: 150px;
+	display: table;
+  }
+
+  .tour .col-md-4 {
+	display: table-cell;
+	float: none;
+	vertical-align: middle;
+  }
+  .tour .col-md-7 {
+	display: table-cell;
+	float: none;
+	vertical-align: middle;
+  }
+
+  .lj-tour-r h3,
+  .lj-tour-l h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 50px 0 25px;
+  }
+
+  .lj-tour-r p,
+  .lj-tour-l p {
+    color: #888;
+    margin: 0 0 25px;
+  }
+
+  .lj-tour-r a,
+  .lj-tour-l a {
+    height: 50px;
+    line-height: 48px;
+    padding: 0 25px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #222;
+    color: #222;
+    background-color: transparent;
+  }
+
+  .lj-tour-r a:hover,
+  .lj-tour-l a:hover {
+    border: 1px solid #1dd5d1;
+    color: #fff;
+    background-color: #1dd5d1;
+  }
+
+  .lj-tour-r-image {
+	padding-left: 8%;
+  }
+  .lj-tour-l-image {
+	padding-right: 8%;
+  }
+  .lj-tour-r-image img,
+  .lj-tour-l-image img {
+    max-width: 750px;
+	width: 100%;
+  }
+
+
+
+/* 6. ICON & FEATURES */
+
+  .icon-features {
+    padding: 150px 0;
+    background-color: #f6f8fa;
+  }
+
+  .lj-icon-features-title h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 50px;
+    text-align: center;
+  }
+
+  .lj-icon-features-box {
+    text-align: center;
+  }
+
+  .lj-icon-features-box span {
+    font-size: 6em;
+    color: #1dd5d1;
+  }
+
+   .lj-icon-features-box img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  @media (max-width: 480px) {
+    .lj-logo a, .lj-logo img {
+      width: 275px;
+  }
+	.lj-icon-features-box span {
+		font-size: 4em;
+	}
+	.lj-icon-features-box span img {
+		width: 50px;
+    height: 50px;
+	}
+  }
+
+  .lj-icon-features-box h4 {
+    font-size: 1.15em;
+    font-weight: 400;
+    margin: 0 0 15px;
+  }
+
+  .lj-icon-features-box p {
+    margin: 0 0 10px;
+  }
+
+  .lj-icon-features-box a {
+    font-weight: 400;
+  }
+
+  .lj-icon-features-box a i {
+    vertical-align: middle;
+    -moz-transition: padding-left 0.125s ease-in-out 0s;
+    -o-transition: padding-left 0.125s ease-in-out 0s;
+    -webkit-transition: padding-left 0.125s ease-in-out 0s;
+    transition: padding-left 0.125s ease-in-out 0s;
+  }
+
+  .lj-icon-features-box a:hover i {
+    padding-left: 5px;
+  }
+
+  .lj-icon-features-item {
+    margin-top: 150px;
+  }
+
+  .lj-icon-features-item h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 25px;
+  }
+
+  .lj-icon-features-item p {
+    color: #888;
+    margin: 0 0 25px;
+  }
+
+  .lj-icon-features-item-icons {
+    margin-top: 150px;
+  }
+
+  .lj-icon-features-item-icons h4 {
+    font-size: 1.15em;
+    font-weight: 400;
+    margin: 0 0 15px;
+  }
+
+  .lj-icon-features-item-icons h4 i {
+    font-size: 1.5em;
+    vertical-align: middle;
+    margin-right: 10px;
+    color: #1dd5d1;
+  }
+
+  .lj-icon-features-item-icons p {
+    color: #888;
+    margin: 0 0 50px;
+  }
+
+  .lj-icon-features-item-icons p:last-child {
+    margin: 0;
+  }
+
+
+
+/* 7. PRODUCT SHOWCASE CENTER */
+
+  .tour-center {
+    padding: 150px 0;
+    background-color: #1e1e1e;
+  }
+
+  .lj-tour-center h3 {
+    font-size: 3em;
+	line-height: 1.2em;
+    font-weight: 300;
+    margin: 0 0 25px;
+    color: #1dd5d1;
+    text-align: center;
+  }
+
+  .lj-tour-center h3 span {
+    font-weight: 700;
+  }
+
+  .lj-tour-center p {
+    color: #b4b4b4;
+    margin: 0 0 100px;
+    text-align: center;
+  }
+
+  .lj-tour-center a {
+    color: #222;
+  }
+
+  .lj-tour-center a:hover {
+
+  }
+
+  .lj-tour-center-image img {
+    max-width: 100%;
+  }
+
+  .lj-tour-center-btn {
+    text-align: center;
+  }
+
+  .lj-tour-center-btn > a {
+    height: 75px;
+    line-height: 73px;
+    padding: 0 25px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,0.6);
+    color: #fff;
+    background-color: transparent;
+  }
+
+  .lj-tour-center-btn > a:hover {
+    border: 1px solid #fff;
+    color: #222;
+    background-color: #fff;
+  }
+
+  .lj-tour-center-btn p {
+    color: #fff;
+    font-size: 0.9em;
+    margin: 25px 0 0;
+  }
+
+  .lj-tour-center-btn p > a {
+    font-weight: 700;
+    color: #fff;
+  }
+
+.referenties {
+	position: relative;
+	max-width: 900px;
+    margin: 0 auto;
+	padding: 125px 20px 0;
+}
+.quote-single:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.quote-single > div {
+	float: left;
+	width: 30%;
+	text-align: center;
+}
+.quote-single > div + div {
+	float: right;
+	width: 65%;
+	text-align: left;
+	font-size: 24px;
+	font-weight: 300;
+	padding: 20px 20px 40px 0;
+	background: transparent url('../img/quote.png') no-repeat top left;
+  background-size: 22px;
+}
+.quote-single > div h4 {
+	margin-bottom: 5px;
+	font-size: 17px;
+	margin-bottom: 5px;
+}
+.quote-single > div p {
+	margin: 0;
+}
+.quote-single > div img {
+	margin: 0 auto;
+	padding-left: 20px;
+  width: 215px;
+}
+.quote-single > div + div p {
+	margin: 0;
+	line-height: 1.75;
+}
+
+@media (max-width: 700px) {
+
+	.referenties {
+	padding: 75px 20px 0;
+	}
+	.quote-single > div {
+    float: none;
+    width: 100%;
+	}
+	.quote-single > div + div {
+    float: none;
+    width: 80%;
+	margin: 5% 10% 0;
+	text-align: center;
+	font-size: 20px;
+	padding: 20px 0;
+	}
+	
+}
+
+/* 8. PRICING TABLE */
+
+  .prijzen {
+    padding: 150px 0;
+  }
+
+  .lj-prijzen-text h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 50px 0 25px;
+  }
+
+  .lj-prijzen-text p {
+    color: #888;
+    margin: 0 0 25px;
+  }
+
+  .lj-prijzen-text a {
+    height: 50px;
+    line-height: 48px;
+    padding: 0 25px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border: 1px solid #222;
+    color: #222;
+    background-color: transparent;
+  }
+
+  .lj-prijzen-text a:hover {
+    border: 1px solid #1dd5d1;
+    color: #fff;
+    background-color: #1dd5d1;
+  }
+
+  .lj-prijzen div {
+	width: 100%;
+    text-align: center;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 3px;
+    border-radius: 0px;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+  }
+
+  .lj-prijzen span {
+    display: block;
+	padding: 25px 5px 0;
+  }
+  
+  .lj-prijzen span.probeer {
+    font-size: 14px;
+	padding: 0 20px 20px;
+  color: #8c8a8a;
+  }
+
+  .lj-prijzen span.lj-pricing-icon {
+    font-size: 4em;
+    line-height: 1em;
+  }
+
+  .lj-prijzen span.lj-pricing-user {
+    font-size: 2em;
+  }
+
+  .lj-prijzen span.lj-pricing-price {
+    font-size: 4em;
+    line-height: 1em;
+    margin: 0;
+  }
+
+  .lj-prijzen span.lj-pricing-time {
+    font-size: 17px;
+	padding-top: 0;
+  }
+
+  .lj-prijzen ul {
+	text-align: left;
+    padding-left: 0;
+    margin-top: 25px;
+    margin-bottom: 0;
+    list-style-type: none;
+  }
+
+  .lj-prijzen ul li {
+	border-top: 1px solid #cecece;
+	padding: 12px;
+	color: #8c8a8a;
+  }
+
+  .lj-prijzen ul li span{
+	text-align: right;
+	float: right;
+	padding: 0;
+	display: inherit;
+  }
+
+  .lj-prijzen ul li:last-child {
+	border-bottom: 1px solid #cecece;
+  }
+
+  .lj-prijzen ul li:last-child {
+    margin-bottom: 25px;
+  }
+
+  .lj-prijzen a.lj-pricing-button {
+    height: 40px;
+    line-height: 38px;
+    padding: 0 15px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	margin-bottom: 10px;
+  }
+
+  .prijzen-tabel {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .lj-prijzen-first {
+	padding: 0;
+	border: 1px solid #cecece;
+	margin-right: 15px;
+	width: calc(25% - 12px);
+	display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+  }
+
+  .lj-prijzen-first span.lj-pricing-icon {
+    color: #c1c1c1;
+  }
+
+  .lj-prijzen-first span.lj-pricing-time {
+    color: #888;
+  }
+
+  .lj-prijzen-first a.lj-pricing-button {
+    border: 1px solid #1dd5d1;
+    color: #fff;
+    background-color: #1dd5d1;
+  }
+
+  .lj-prijzen-first a.lj-pricing-button:hover {
+    background-color: #1ec3bf;
+  }
+
+  .lj-prijzen-second {
+	padding: 0;
+	border: 1px solid #cecece;
+	width: calc(25% - 12px);
+	display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+  }
+
+  .lj-prijzen-second h3 {
+	font-size: 24px;
+	color: #222;
+	padding-top: 40px;
+  }
+
+  .lj-prijzen-second div {
+	color: #8c8a8a;
+    background-color: #f6f8fa;
+	padding: 50px 10px 25px;
+	font-size: 16px;
+  }
+
+  .lj-prijzen-second a {
+	text-decoration: underline;
+	color: #1dd5d1;
+  }
+
+  .lj-prijzen-second a:hover {
+
+  }
+
+
+
+/* 9. PARALLAX + TEXTS */
+
+  .parallax-texts {
+    padding: 150px 0;
+  }
+
+  .lj-parallax-texts {
+    text-align: center;
+  }
+
+  .lj-parallax-texts h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 25px;
+    color: #fff;
+  }
+
+  .lj-parallax-texts p {
+    color: #fff;
+    margin: 0 0 25px;
+  }
+
+  .lj-parallax-texts a {
+    height: 50px;
+    line-height: 48px;
+    padding: 0 25px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  .lj-parallax-texts a.lj-parallax-texts-btnl {
+    border: 1px solid #1dd5d1;
+    color: #fff;
+    background-color: #1dd5d1;
+    margin-right: 25px;
+  }
+
+  .lj-parallax-texts a.lj-parallax-texts-btnr {
+    border: 1px solid rgba(255,255,255,0.6);
+    color: #fff;
+    background-color: transparent;
+    margin-right: 25px;
+  }
+
+  .lj-parallax-texts a.lj-parallax-texts-btnl:hover {
+    border: 1px solid #1ec3bf;
+    color: #fff;
+    background-color: #1ec3bf;
+  }
+
+  .lj-parallax-texts a.lj-parallax-texts-btnr:hover {
+    border: 1px solid #fff;
+    color: #222;
+    background-color: #fff;
+  }
+
+
+
+/* 10. CUSTOMERS */
+
+  .customers {
+    padding: 150px 0;
+  }
+
+  .lj-customers-img img {
+    max-width: 100%;
+  }
+
+  .lj-customers-texts h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 250px 0 25px;
+  }
+
+  .lj-customer-box {
+    padding-right: 25px;
+  }
+
+  .lj-customer-box:active,
+  .lj-customer-box:focus {
+    outline: 0;
+    border: 0;
+  }
+
+  .lj-customer-box p {
+    color: #888;
+    margin: 0 0 25px;
+  }
+
+  .lj-customer-box img {
+    display: inline-block;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  .lj-customer-box span {
+    display: inline-block;
+    font-weight: 400;
+    color: #888;
+    margin-left: 25px;
+  }
+
+
+
+/* 11. CLIENTS */
+
+  .clients {
+    padding: 150px 0;
+    background-color: #f6f8fa;
+  }
+
+  .clients *:active,
+  .clients *:focus {
+    outline: 0;
+    border: 0;
+  }
+
+  .lj-clients-item img {
+    max-width: 100%;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+    margin: 0 auto;
+    -webkit-backface-visibility: hidden;
+    filter: url("data:image/svg+xml;utf8,#grayscale");
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+  }
+
+  .lj-clients-item img:hover {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+    filter: none;
+    -webkit-filter: none;
+  }
+
+  .lj-clients-texts {
+    text-align: center;
+  }
+
+  .lj-clients-texts h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 50px 0 25px;
+  }
+
+  .lj-clients-texts p {
+    margin: 0 0 25px;
+  }
+
+  .lj-clients-texts a {
+    height: 50px;
+    line-height: 48px;
+    padding: 0 25px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  .lj-clients-texts a.lj-clients-texts-btnl {
+    border: 1px solid #1dd5d1;
+    color: #fff;
+    background-color: #1dd5d1;
+    margin-right: 25px;
+  }
+
+  .lj-clients-texts a.lj-clients-texts-btnr {
+    border: 1px solid #222;
+    color: #222;
+    background-color: transparent;
+    margin-right: 25px;
+  }
+
+  .lj-clients-texts a.lj-clients-texts-btnl:hover {
+    border: 1px solid #1ec3bf;
+    color: #fff;
+    background-color: #1ec3bf;
+  }
+
+  .lj-clients-texts a.lj-clients-texts-btnr:hover {
+    border: 1px solid #222;
+    color: #fff;
+    background-color: #222;
+  }
+
+
+
+/* 12. NEWS */
+
+  .news {
+    padding: 150px 0;
+  }
+
+  .news *:active,
+  .news *:focus {
+    outline: 0;
+    border: 0;
+  }
+
+  .lj-news-texts h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 50px 0 25px;
+  }
+
+  .lj-news-texts p {
+    margin: 0 0 25px;
+  }
+
+  .lj-news-texts a {
+    font-weight: 400;
+  }
+
+  .lj-news-texts a i {
+    vertical-align: middle;
+    -moz-transition: padding-left 0.125s ease-in-out 0s;
+    -o-transition: padding-left 0.125s ease-in-out 0s;
+    -webkit-transition: padding-left 0.125s ease-in-out 0s;
+    transition: padding-left 0.125s ease-in-out 0s;
+  }
+
+  .lj-news-texts a:hover i {
+    padding-left: 5px;
+  }
+
+  .lj-news-carousel .row .lj-news-item:last-child div {
+    padding-right: 15px;
+  }
+
+  .lj-news-carousel .row .lj-news-item:first-child div {
+    padding-left: 15px;
+  }
+
+  .lj-news-item img {
+    max-width: 100%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  .lj-news-item h4 {
+    font-size: 1.15em;
+    font-weight: 400;
+    margin: 25px 0 15px;
+  }
+
+  .lj-news-item p {
+    margin: 0 0 10px;
+  }
+
+  .lj-news-item a {
+    font-weight: 400;
+  }
+
+  .lj-news-item a i {
+    vertical-align: middle;
+    -moz-transition: padding-left 0.125s ease-in-out 0s;
+    -o-transition: padding-left 0.125s ease-in-out 0s;
+    -webkit-transition: padding-left 0.125s ease-in-out 0s;
+    transition: padding-left 0.125s ease-in-out 0s;
+  }
+
+  .lj-news-item a:hover i {
+    padding-left: 5px;
+  }
+
+
+
+/* 13. VIDEO */
+
+  .video {
+    padding: 150px 0;
+    background-color: #f6f8fa;
+  }
+
+  .lj-video-texts h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 50px 0 25px;
+  }
+
+  .lj-video-texts p {
+    margin: 0 0 25px;
+  }
+
+
+
+/* 14. APP STORES */
+
+  .app-stores {
+    padding: 150px 0;
+  }
+
+  .lj-app-stores-texts {
+    text-align: center;
+  }
+
+  .lj-app-stores-texts h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 25px;
+    color: #fff;
+  }
+
+  .lj-app-stores-texts a {
+    display: inline-block;
+    margin: 0 25px;
+    height: 60px;
+    width: 200px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  .lj-app-stores-texts a img {
+    max-width: 100%;
+  }
+
+  .lj-app-stores-texts a:hover {
+    background-color: rgba(0,0,0,0.5);
+  }
+
+
+
+/* 15. FAQ */
+
+  .faq {
+    padding: 150px 0;
+  }
+
+  .faq .row {
+    margin-top: 50px;
+  }
+
+  .faq .row:first-child {
+    margin-top: 0;
+  }
+
+  .lj-faq-title {
+    text-align: center;
+  }
+
+  .lj-faq-title h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .lj-faq-item h4 {
+    font-size: 1.15em;
+    font-weight: 400;
+    margin: 0 0 15px;
+  }
+
+  .lj-faq-item p {
+    margin: 0;
+    color: #888;
+  }
+
+
+
+/* 16. TEAM */
+
+  .team {
+    padding: 150px 0;
+    background-color: #f6f8fa;
+  }
+
+  .lj-team-text h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 50px;
+    text-align: center;
+  }
+
+  .lj-team-member {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  .lj-team-member img {
+    width: 100%;
+    max-width: 100%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  .lj-team-member-mask {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 200%;
+    left: -100%;
+    overflow: hidden;
+    -moz-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+    -webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+    transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+    text-align: center;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  .lj-team-member-mask:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .lj-team-member-mask a {
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0 10px;
+  }
+
+  .lj-team-member-mask a:hover {
+    color: #1dd5d1;
+  }
+
+  .lj-team-member:hover .lj-team-member-mask {
+    right: 0;
+    left: 0;
+  }
+
+  .lj-team h4 {
+    font-size: 1.15em;
+    font-weight: 400;
+    margin: 25px 0 0;
+    text-align: center;
+  }
+
+  .lj-team p {
+    margin: 0;
+    color: #888;
+    text-align: center;
+  }
+
+
+
+/* 17. TESTIMONIALS */
+
+  .testimonials {
+    padding: 150px 0;
+  }
+
+  .lj-testimonials-text h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 50px;
+    text-align: center;
+  }
+
+  .lj-testimonial p {
+    margin: 0 0 25px;
+    color: #888;
+    font-style: italic;
+  }
+
+  .lj-testimonial img {
+    display: inline-block;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #f0f0f0;
+  }
+
+  .lj-testimonial h5 {
+    display: inline-block;
+    font-weight: 400;
+    margin: 0 0 0 15px;
+    font-size: 1em;
+  }
+
+  .lj-testimonial h5 span {
+    color: #888;
+  }
+
+
+
+/* 18. TWITTER */
+
+  .twitter {
+    padding: 150px 0;
+    background-color: #1dd5d1;
+  }
+
+  .lj-twitter-text h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 50px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .lj-twitter-text h3 a {
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .lj-twitter-text h3 i {
+    margin-right: 15px;
+  }
+
+  .lj-twitter > span {
+    display: block;
+    color: #fff;
+    text-align: center;
+  }
+
+  .lj-tweet p {
+    color: #fff;
+    margin: 0;
+  }
+
+  .lj-tweet p a {
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .lj-tweet p span {
+    font-size: 0.9em;
+    font-weight: 400;
+    display: block;
+  }
+
+
+
+/* 19. CONTACT */
+
+  .contact {
+    padding: 150px 0;
+    background-color: #f6f8fa;
+  }
+
+  .lj-contact-text h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 25px;
+    text-align: center;
+  }
+
+  .lj-contact input[type=text],
+  .lj-contact textarea {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 25px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+  }
+
+  .lj-contact input[type=text] {
+    height: 50px;
+    padding: 0 15px;
+  }
+
+  .lj-contact textarea {
+    height: 200px;
+    padding: 15px;
+    resize: none;
+    overflow: hidden;
+  }
+
+  .lj-contact input[type=text]:focus,
+  .lj-contact textarea:focus {
+    outline: 0;
+    border: 1px solid #1dd5d1;
+  }
+
+  .lj-contact input[type=submit] {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    background-color: #1dd5d1;
+    color: #fff;
+    padding: 0 25px;
+    border: 0;
+    height: 50px;
+    display: inline-block;
+    font-size: 0.9em;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+  }
+
+  .lj-contact input[type=submit]:hover {
+    background-color: #1ec3bf;
+  }
+
+  .lj-contact-submit {
+    text-align: center;
+  }
+
+  .lj-contact-message {
+    min-height: 25px;
+    color: #222;
+    font-size: 0.9em;
+    margin: 0 0 10px;
+    text-align: center;
+  }
+
+  .lj-contact-message i {
+    margin-right: 5px;
+  }
+
+  .lj-contact-message .ion-alert-circled {
+    color: #ff5c5c;
+  }
+
+  .lj-contact-message .ion-checkmark {
+    color: #2ecc71;
+  }
+
+  .lj-contact-info {
+    padding: 0;
+    color: #bcbcbc;
+    font-size: 0.9em;
+    margin: 10px 0 0;
+    text-align: center;
+  }
+
+
+
+/* 20. FOOTER */
+
+  .footer {
+    padding: 100px 0;
+  }
+
+  .lj-footer-name h4 {
+    font-size: 1.75em;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .lj-footer-menu ul {
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+	display: block;
+	text-align: center;
+	color: #8c8a8a;
+  }
+
+  .lj-footer-menu ul li {
+	display: inline-block;
+	border-left: 1px solid #c3c3c3;
+	margin-left: 20px;
+	padding-left: 20px;
+  }
+  .lj-footer-menu ul li:first-child {
+	border: 0;
+	margin-left: 0;
+	padding-left: 0;
+  }
+  .lj-footer-menu ul li:last-child {
+	margin-left: 50px;
+	border: 0;
+  }
+
+  .lj-footer-menu ul li a {
+    color: #1dd5d1;
+	text-decoration: underline;
+  }
+
+  .lj-footer-menu ul li a:hover {
+    color: #1ec3bf;
+  }
+
+
+
+/* 21. SIDEBAR MENU */
+
+  .wrap {
+      position: relative;
+  }
+
+  .panel {
+    background: #1dd5d1;
+    z-index: 9999;
+    position: fixed;
+    right: -320px; /*or width of your navigation panel*/
+    width: 500px; /*should match the above value*/
+    padding: 30px;
+
+  }
+
+  .panel img {
+    width: 100px;
+    height: 100px;
+    vertical-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .panel ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  .panel ul li {
+	text-align: center;
+    font-size: 18px;
+    margin-top: 25px;
+  }
+
+  .panel ul li a {
+    color: #fff;
+  }
+
+  .panel ul li a {
+    -moz-transition: padding-left 0.125s ease-in-out 0s;
+    -o-transition: padding-left 0.125s ease-in-out 0s;
+    -webkit-transition: padding-left 0.125s ease-in-out 0s;
+    transition: padding-left 0.125s ease-in-out 0s;
+  }
+
+  .panel ul li a:hover {
+    padding-left: 5px;
+  }
+
+  .panel p {
+    margin: 25px 0 0;
+    text-align: center;
+  }
+
+  .panel p a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 5px;
+    font-size: 1.25em;
+  }
+
+  .panel p a:hover {
+    background-color: #1ec3bf;
+  }
+
+  .menu-fixed-button {
+    width: 100%;
+    height: 0;
+  }
+
+  .lj-menu-fixed-button {
+    text-align: right;
+    padding-right: 65px;
+  }
+
+  .lj-menu-fixed-button span {
+    display: inline-block;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgba(0,0,0,0.15);
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    top: 30px;
+	right: 30px;
+  }
+
+  .lj-menu-fixed-button span.ion-android-close {
+	right: 280px;
+  }
+
+  .lj-menu-fixed-button span:hover {
+    color: #fff;
+  }
+
+.opl {
+position:absolute;
+top:720px;
+right:0px;
+z-index:99999;
+}
+.opl a {
+width:73px;
+height:56px;
+text-indent:-9999px;
+display:block;
+background:url('https://s3.amazonaws.com/onepagelove/one-page-love-award-right.png') no-repeat;
+}
+  
+  
+/* 22. BREAKPOINTS */
+
+  @media (max-width: 991px) {
+  
+	.opl,
+	#awwwards.right {
+		display: none;
+	}
+
+    /* 4. HEADER */
+
+    .lj-menu ul {
+      display: none;
+    }
+
+    .lj-menu span {
+      display: inline-block;
+    }
+
+    /* 5. PRODUCT SHOWCASE */
+
+    .lj-tour-r-image img {
+      margin-top: 50px;
+    }
+
+	.tour .col-md-4 {
+		display: block;
+		float: none;
+		vertical-align: middle;
+	}
+	  .tour .col-md-7 {
+		display: block;
+		float: none;
+		vertical-align: middle;
+	}
+
+
+    /* 6. ICON & FEATURES */
+
+    .lj-icon-features-title h3 {
+      margin: 0;
+    }
+
+    .lj-icon-features-box {
+      margin-top: 50px;
+    }
+
+    .lj-icon-features-box p {
+      padding: 0 50px;
+    }
+
+    .lj-icon-features-item-icons {
+      margin-top: 50px;
+    }
+
+    /* 8. PRICING TABLE */
+
+	.prijzen .container {
+		width: 90%;
+	}
+
+	.lj-prijzen-first {
+		width: calc(33.33% - 10px);
+	}
+
+	.lj-prijzen-first.prijs-pro {
+		margin: 0;
+	}
+
+  .lj-prijzen ul li {
+      font-size: 15px;
+    }
+
+	.lj-prijzen-second {
+		display: block;
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.lj-prijzen-second h3 {
+		padding-top: 0;
+	}
+
+	.lj-prijzen-second div {
+		padding: 30px;
+	}
+
+	.lj-prijzen-second p {
+		margin-bottom: 0;
+	}
+
+    /* 10. CUSTOMERS */
+
+    .lj-customers-texts h3 {
+      margin: 50px 0 25px;
+    }
+
+    /* 12. NEWS */
+
+    .lj-news-texts {
+      margin: 0 0 50px;
+    }
+
+    /* 15. FAQ */
+
+    .faq .row {
+      margin-top: 0;
+    }
+
+    .lj-faq-item h4 {
+      margin: 50px 0 15px;
+    }
+
+    /* 16. TEAM */
+
+    .lj-team {
+      margin-bottom: 50px;
+    }
+
+    .team {
+      padding: 150px 0 100px;
+    }
+
+    /* 17. TESTIMONIALS */
+
+    .lj-testimonials-text h3 {
+      margin: 0;
+    }
+
+    .lj-testimonial {
+      margin-top: 50px;
+    }
+
+    /* 18. TWITTER */
+
+    .lj-twitter-text h3 {
+      margin: 0;
+    }
+
+    .lj-tweet {
+      margin-top: 50px;
+    }
+
+    .lj-tweet p {
+      text-align: center;
+    }
+
+    /* 20. FOOTER */
+
+    .lj-footer-menu ul {
+      margin-top: 0;
+    }
+
+    .lj-footer-name h4,
+    .lj-footer-menu ul li {
+      text-align: center;
+    }
+
+  }
+
+  @media (max-width: 767px) {
+
+    /* 4. HEADER */
+
+	header > .container {
+		padding-top: 20px;
+	}
+
+	.lj-overlay-color {
+
+	}
+
+	.lj-texts {
+		margin-top: 100px;
+	}
+
+	.lj-texts h1 {
+		font-size: 45px;
+	}
+
+	.lj-texts h1 span {
+		right: 50px;
+		top: -80px;
+		font-size: 16px;
+		width: 80px;
+		height: 80px;
+		line-height: 80px;
+	}
+
+	.lj-texts h2 {
+		line-height: 1.6em;
+	}
+
+    .lj-trialform {
+      width: 80%;
+      height: auto;
+      bottom: -130px;
+    }
+
+    .lj-trialform input[type=text],
+    .lj-trialform input[type=submit] {
+      width: 100%;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      border: 1px solid #ddd;
+      margin-bottom: 5px;
+    }
+
+	 /* 8. PRICING TABLE */
+
+	 .lj-prijzen-first {
+		width: 100%;
+		margin: 0 0 20px;
+	}
+
+    /* 14. APP STORES */
+
+    .lj-app-stores-texts a:last-child {
+      margin-top: 25px;
+    }
+
+    /* 16. TEAM */
+
+    .lj-team-member-mask a {
+      font-size: 2.5em;
+    }
+
+	@media (max-width: 480px) {
+
+	header > .container {
+	  padding-bottom: 50px;
+	}
+
+	body.beginnen .lj-trialform {
+		top: 50px;
+	}
+
+	a#logo-begin {
+		width: 80%;
+		left: 10%;
+		top: -80px;
+	}
+
+	.lj-texts h1 {
+		font-size: 36px;
+		display: block;
+	}
+
+	.lj-texts h1 span {
+		right: 0;
+		font-size: 13px;
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		top: -60px;
+	}
+
+	.lj-trialform {
+      position: relative;
+	  bottom: auto;
+	  width: 100%;
+	  margin: 40px auto;
+    margin-top: 90px;
+	  box-shadow: none;
+    }
+
+    /* 7. PRODUCT SHOWCASE CENTER */
+
+	.tour {
+	  padding: 30px 0 0px;
+	}
+
+	.tour .row {
+	  padding-bottom: 50px;
+	}
+
+    .lj-tour-center-btn > a {
+      font-size: 1em;
+      padding: 0 15px;
+    }
+	
+	.lj-tour-center h3 {
+		font-size: 2em;
+	}
+
+	.icon-features,
+	.prijzen,
+	.tour-center,
+	.contact {
+      padding: 60px 0;
+	}
+
+    /* 9. PARALLAX + TEXTS */
+
+    .lj-parallax-texts a.lj-parallax-texts-btnr {
+      margin-top: 25px;
+    }
+
+    /* 11. CLIENTS */
+
+    .lj-clients-texts a.lj-clients-texts-btnr {
+      margin-top: 25px;
+    }
+
+	/* 21. SIDEBAR MENU */
+
+	.lj-menu-fixed-button span {
+		top: 20px;
+		right: 20px;
+	}
+
+	#menu {
+		width: 250px !important;
+	}
+	.lj-menu-fixed-button span.ion-android-close {
+		right: 270px;
+	}
+
+	.footer {
+	  padding: 50px 0;
+	}
+
+	.lj-footer-menu ul li,
+	.lj-footer-menu ul li:last-child {
+		display: block;
+		margin: 10px 0;
+		padding: 0;
+		border: 0;
+	}
+
+
+	}
