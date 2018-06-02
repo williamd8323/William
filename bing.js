@@ -3,9 +3,12 @@ $(function() {
         var params = {
             // Request parameters
             "q": topic,
-            "count": "10",
             "offset": "0",
-            "count": "5"
+            "count": "10",
+            "freshness": "week",
+            "resolution": "720p",
+            "SafeSearch": "strict",
+            "pricing": "free"
         };
       
         $.ajax({
@@ -23,9 +26,13 @@ $(function() {
            for(var i = 0; i < data.value.length; i++){
                 var video = data.value[i].embedHtml;
                 var name = data.value[i].name;
-                var div = "<div>"+video+name+"</div>";
+                var div = video;
                 $('#container').append(div);
-                console.log(data);
            }
+                console.log(data);
         })
     });
+
+
+    // how to access each video content data.value[i]
+    //access each video
